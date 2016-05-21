@@ -1,0 +1,393 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		52B852BD1CF0F14A00C82195 /* AStar.h in Headers */ = {isa = PBXBuildFile; fileRef = 52B852BC1CF0F14A00C82195 /* AStar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		52B852C41CF0F14A00C82195 /* AStar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B852B91CF0F14A00C82195 /* AStar.framework */; };
+		52B852C91CF0F14A00C82195 /* AStarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B852C81CF0F14A00C82195 /* AStarTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		52B852C51CF0F14A00C82195 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52B852B01CF0F14A00C82195 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52B852B81CF0F14A00C82195;
+			remoteInfo = AStar;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		52B852B91CF0F14A00C82195 /* AStar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AStar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		52B852BC1CF0F14A00C82195 /* AStar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AStar.h; sourceTree = "<group>"; };
+		52B852BE1CF0F14A00C82195 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52B852C31CF0F14A00C82195 /* AStarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AStarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		52B852C81CF0F14A00C82195 /* AStarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AStarTests.swift; sourceTree = "<group>"; };
+		52B852CA1CF0F14A00C82195 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		52B852B51CF0F14A00C82195 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52B852C01CF0F14A00C82195 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52B852C41CF0F14A00C82195 /* AStar.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		52B852AF1CF0F14A00C82195 = {
+			isa = PBXGroup;
+			children = (
+				52B852BB1CF0F14A00C82195 /* AStar */,
+				52B852C71CF0F14A00C82195 /* AStarTests */,
+				52B852BA1CF0F14A00C82195 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		52B852BA1CF0F14A00C82195 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				52B852B91CF0F14A00C82195 /* AStar.framework */,
+				52B852C31CF0F14A00C82195 /* AStarTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		52B852BB1CF0F14A00C82195 /* AStar */ = {
+			isa = PBXGroup;
+			children = (
+				52B852BC1CF0F14A00C82195 /* AStar.h */,
+				52B852BE1CF0F14A00C82195 /* Info.plist */,
+			);
+			path = AStar;
+			sourceTree = "<group>";
+		};
+		52B852C71CF0F14A00C82195 /* AStarTests */ = {
+			isa = PBXGroup;
+			children = (
+				52B852C81CF0F14A00C82195 /* AStarTests.swift */,
+				52B852CA1CF0F14A00C82195 /* Info.plist */,
+			);
+			path = AStarTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		52B852B61CF0F14A00C82195 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52B852BD1CF0F14A00C82195 /* AStar.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		52B852B81CF0F14A00C82195 /* AStar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52B852CD1CF0F14A00C82195 /* Build configuration list for PBXNativeTarget "AStar" */;
+			buildPhases = (
+				52B852B41CF0F14A00C82195 /* Sources */,
+				52B852B51CF0F14A00C82195 /* Frameworks */,
+				52B852B61CF0F14A00C82195 /* Headers */,
+				52B852B71CF0F14A00C82195 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AStar;
+			productName = AStar;
+			productReference = 52B852B91CF0F14A00C82195 /* AStar.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		52B852C21CF0F14A00C82195 /* AStarTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52B852D01CF0F14A00C82195 /* Build configuration list for PBXNativeTarget "AStarTests" */;
+			buildPhases = (
+				52B852BF1CF0F14A00C82195 /* Sources */,
+				52B852C01CF0F14A00C82195 /* Frameworks */,
+				52B852C11CF0F14A00C82195 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				52B852C61CF0F14A00C82195 /* PBXTargetDependency */,
+			);
+			name = AStarTests;
+			productName = AStarTests;
+			productReference = 52B852C31CF0F14A00C82195 /* AStarTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		52B852B01CF0F14A00C82195 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "John Ahrens";
+				TargetAttributes = {
+					52B852B81CF0F14A00C82195 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					52B852C21CF0F14A00C82195 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 52B852B31CF0F14A00C82195 /* Build configuration list for PBXProject "AStar" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 52B852AF1CF0F14A00C82195;
+			productRefGroup = 52B852BA1CF0F14A00C82195 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				52B852B81CF0F14A00C82195 /* AStar */,
+				52B852C21CF0F14A00C82195 /* AStarTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		52B852B71CF0F14A00C82195 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52B852C11CF0F14A00C82195 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		52B852B41CF0F14A00C82195 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52B852BF1CF0F14A00C82195 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52B852C91CF0F14A00C82195 /* AStarTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		52B852C61CF0F14A00C82195 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52B852B81CF0F14A00C82195 /* AStar */;
+			targetProxy = 52B852C51CF0F14A00C82195 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		52B852CB1CF0F14A00C82195 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		52B852CC1CF0F14A00C82195 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		52B852CE1CF0F14A00C82195 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = AStar/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.john-ahrens.AStar";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		52B852CF1CF0F14A00C82195 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = AStar/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.john-ahrens.AStar";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		52B852D11CF0F14A00C82195 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = AStarTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.john-ahrens.AStarTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		52B852D21CF0F14A00C82195 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = AStarTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.john-ahrens.AStarTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		52B852B31CF0F14A00C82195 /* Build configuration list for PBXProject "AStar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52B852CB1CF0F14A00C82195 /* Debug */,
+				52B852CC1CF0F14A00C82195 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52B852CD1CF0F14A00C82195 /* Build configuration list for PBXNativeTarget "AStar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52B852CE1CF0F14A00C82195 /* Debug */,
+				52B852CF1CF0F14A00C82195 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		52B852D01CF0F14A00C82195 /* Build configuration list for PBXNativeTarget "AStarTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52B852D11CF0F14A00C82195 /* Debug */,
+				52B852D21CF0F14A00C82195 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 52B852B01CF0F14A00C82195 /* Project object */;
+}
