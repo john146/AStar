@@ -22,6 +22,7 @@ class SearchManagerTests: XCTestCase {
 
     /**
      * Tests the case where the map looks like start---end. Single path, no intermediate nodes.
+     * Diagram looks like: Start*---*End
      */
     func testSinglePathNoIntermediateNodes() {
         let start = Node()
@@ -42,6 +43,8 @@ class SearchManagerTests: XCTestCase {
 
     /**
      * Tests the case where there is a node between the start and end nodes, but there is still only one possible path.
+     * Diagram looks like: Start*---+---*End
+     *                              A
      */
     func testSinglePathOneIntermediateNode() {
         let start = Node()
@@ -69,6 +72,9 @@ class SearchManagerTests: XCTestCase {
     
     /**
      * Tests the case with two possible paths. The shortest first leg leads to the shortest path.
+     * Diagram looks like: Start*---+A
+     *                           \   \
+     *                           B+---*End
      */
     func testTwoPathsTwoIntermediateNodesShortestFirstLegShortestPath() {
         let start = Node()
@@ -95,7 +101,7 @@ class SearchManagerTests: XCTestCase {
         let searchManager = SearchManager(withStart: start, end: end)
         
         XCTAssertTrue(searchManager.findPath())
-        let totalPath: Array<Node> = searchManager.recreatePath(end)
+        let totalPath = searchManager.recreatePath(end)
         
         XCTAssertEqual(3, totalPath.count)
         XCTAssertTrue(totalPath[0] === start)
@@ -104,7 +110,11 @@ class SearchManagerTests: XCTestCase {
     }
     
     /**
-     * Tests the condition where there is no route from start to finish
+     * Tests the condition where there is no route from start to finish.
+     * Diagram looks like: Start*---+A
+     *                           \  |    *End
+     *                            \ |
+     *                             +B
      */
     func testNoPathToEnd() {
         let start = Node()
@@ -127,5 +137,58 @@ class SearchManagerTests: XCTestCase {
         let searchManager = SearchManager(withStart: start, end: end)
         
         XCTAssertFalse(searchManager.findPath())
+    }
+    
+    /**
+     * Test the condition where there are multiple paths going through the same intermediate point.
+     * Diagram looks like: Start*---+A----*End
+     *                           \   \   /
+     *                            \   \ /
+     *                            B+---+C
+     */
+    func testMultiplePathsThroughCommonNodes() {
+        let start = Node()
+        start.gScore = 0.0
+        let nodeA = Node()
+        let startNodeA = Path(withNode1: start, node2: nodeA, cost: 15.3)
+        start.paths?.append(startNodeA)
+        let nodeAStart = Path(withNode1: nodeA, node2: start, cost: 15.3)
+        nodeA.paths?.append(nodeAStart)
+        
+        let nodeB = Node()
+        let startNodeB = Path(withNode1: start, node2: nodeB, cost: 10.0)
+        start.paths?.append(startNodeB)
+        let nodeBStart = Path(withNode1: nodeB, node2: start, cost: 10.0)
+        nodeB.paths?.append(nodeBStart)
+        
+        let nodeC = Node()
+        let nodeANodeC = Path(withNode1: nodeA, node2: nodeC, cost: 14.9)
+        nodeA.paths?.append(nodeANodeC)
+        let nodeCNodeA = Path(withNode1: nodeC, node2: nodeA, cost: 14.9)
+        nodeC.paths?.append(nodeCNodeA)
+        let nodeBNodeC = Path(withNode1: nodeB, node2: nodeC, cost: 8.5)
+        nodeB.paths?.append(nodeBNodeC)
+        let nodeCNodeB = Path(withNode1: nodeC, node2: nodeB, cost: 8.5)
+        nodeC.paths?.append(nodeCNodeB)
+        
+        let end = Node()
+        let nodeAEnd = Path(withNode1: nodeA, node2: end, cost: 14.8)
+        nodeA.paths?.append(nodeAEnd)
+        let endNodeA = Path(withNode1: end, node2: nodeA, cost: 14.8)
+        end.paths?.append(endNodeA)
+        let nodeCEnd = Path(withNode1: nodeC, node2: end, cost: 9.8)
+        nodeC.paths?.append(nodeCEnd)
+        let endNodeC = Path(withNode1: end, node2: nodeC, cost: 9.8)
+        end.paths?.append(endNodeC)
+        let searchManager = SearchManager(withStart: start, end: end)
+        
+        XCTAssertTrue(searchManager.findPath())
+        let totalPath = searchManager.recreatePath(end)
+        
+        XCTAssertEqual(4, totalPath.count)
+        XCTAssertTrue(totalPath[0] === start)
+        XCTAssertTrue(totalPath[1] === nodeB)
+        XCTAssertTrue(totalPath[2] === nodeC)
+        XCTAssertTrue(totalPath[3] === end)
     }
 }
