@@ -52,13 +52,16 @@ class SearchManager
                 let cost = current.gScore + path.cost
                 if !openSet.contains({$0 === nextNode})
                 {
+                    // Found a new node
                     openSet.append(nextNode!)
                 }
                 else if cost >= nextNode!.gScore
                 {
+                    // not a good node
                     continue
                 }
                 
+                // The current best node, add it.
                 nextNode!.cameFrom = current
                 nextNode!.gScore = current.gScore + path.cost
                 nextNode!.fScore = (nextNode?.gScore)! + (nextNode?.heuristic)!
