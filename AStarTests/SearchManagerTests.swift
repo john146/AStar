@@ -191,4 +191,33 @@ class SearchManagerTests: XCTestCase {
         XCTAssertTrue(totalPath[2] === nodeC)
         XCTAssertTrue(totalPath[3] === end)
     }
+    
+    /**
+     * Test the situation where there is a Path object with no
+     */
+    func testPathWithEmptyNode() {
+        let start = Node()
+        start.gScore = 0.0
+        let startNodeA = Path(withNode1: start, node2: Node(), cost: 8)
+        start.paths?.append(startNodeA)
+        let nodeB = Node()
+        let startNodeB = Path(withNode1: start, node2: nodeB, cost: 12)
+        start.paths?.append(startNodeB)
+        let nodeBStart = Path(withNode1: nodeB, node2: start, cost: 12)
+        nodeB.paths?.append(nodeBStart)
+        let end = Node()
+        let nodeBEnd = Path(withNode1: nodeB, node2: end, cost: 16)
+        nodeB.paths?.append(nodeBEnd)
+        let endNodeB = Path(withNode1: end, node2: nodeB, cost: 16)
+        end.paths?.append(endNodeB)
+        let searchManager = SearchManager(withStart: start, end: end)
+        
+        XCTAssertTrue(searchManager.findPath())
+        let totalPath = searchManager.recreatePath(end)
+        
+        XCTAssertEqual(3, totalPath.count)
+        XCTAssertTrue(totalPath[0] === start)
+        XCTAssertTrue(totalPath[1] === nodeB)
+        XCTAssertTrue(totalPath[2] === end)
+    }
 }
